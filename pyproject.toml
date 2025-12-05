@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "axiom-kg"
+version = "0.1.0"
+description = "Semantic coordinates for derivable knowledge"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Jonathan Sandhu", email = "jonathan@nodalflow.ai"}
+]
+keywords = [
+    "knowledge-graph",
+    "semantic-web", 
+    "neuro-symbolic",
+    "ai-accountability",
+    "deterministic-wrapper"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "mypy>=1.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/bigbirdreturns/axiom-kg"
+Documentation = "https://github.com/bigbirdreturns/axiom-kg#readme"
+Repository = "https://github.com/bigbirdreturns/axiom-kg"
+Issues = "https://github.com/bigbirdreturns/axiom-kg/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]
