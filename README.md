@@ -256,9 +256,6 @@ Planned:
 - ⬜ Rust core
 
 ## Related Work
-
-- [Deterministic Wrappers for Neural Systems](https://fakesoap.com/deterministic-wrappers) — the architectural pattern
-- [Codex TKN](https://github.com/bigbirdreturns) — the original semantic token system this derives from
 - [FakeSoap](https://fakesoap.com) — cultural criticism and power structure analysis
 
 ## License
